@@ -5,9 +5,10 @@ name = "pypi"
 
 [packages]
 jinja2 = "*"
-docopt = "*"
+docopts = "*"
 
 [dev-packages]
+nose = "*"
 
 [requires]
 python_version = "3.9"

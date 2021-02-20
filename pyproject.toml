@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "rice"
+author = "Hayley Hughes"
+author-email = "hayley@foxes.systems"
+home-page = "https://github.com/hugglesfox/rice"
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+description-file = "README.md"
+
+[tool.flit.scripts]
+rice = "rice.__main__:main"
+
