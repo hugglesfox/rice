@@ -9,6 +9,17 @@ author-email = "hayley@foxes.systems"
 home-page = "https://github.com/hugglesfox/rice"
 classifiers = ["License :: OSI Approved :: Apache Software License"]
 description-file = "README.md"
+requires-python=">=3.6"
+requires = [
+	"jinja2",
+	"docopts",
+]
+
+[tool.flit.metadata.requires-extra]
+test = [
+	"pytest",
+	"pytest-cov",
+]
 
 [tool.flit.scripts]
 rice = "rice.__main__:main"
