@@ -27,6 +27,7 @@ def template(paths):
     """
     for path in deglob(paths):
         with open(path, "r+") as fp:
+            print(path)
             template = Template(fp.read())
             fp.seek(0)
             fp.write(template.render(os.environ))
