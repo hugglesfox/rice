@@ -1,15 +1,30 @@
 import os
+from glob import glob
 from jinja2 import Template
 
 
-def template(files):
+def deglob(paths):
+    """Resolve unix globs
+
+    Args:
+        paths: A list of file paths to deglob
+
+    Returns:
+        Yields all the possible file paths
+    """
+    for path in paths:
+        for file in glob(path):
+            yield file
+
+
+def template(paths):
     """Render a given template files
 
     Args:
-        files: An array of file paths to render
+        paths: An array of file paths to render
     """
-    for file in files:
-        with open(file, "r+") as fp:
+    for path in deglob(paths):
+        with open(path, "r+") as fp:
             template = Template(fp.read())
             fp.seek(0)
             fp.write(template.render(os.environ))
