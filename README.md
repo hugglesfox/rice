@@ -44,3 +44,18 @@ specified with the `-o` flag
 $ rice hello.html -o output.html
 ```
 
+### Docker
+
+The primary use case for rice is customising configuration files in docker
+images at build time using environment variables in multistage builds.
+
+``` dockerfile
+FROM ghcr.io/hugglesfox/rice AS config
+ARG var=default
+COPY configfile .
+RUN rice configfile
+
+FROM scratch AS image
+COPY --from=config configfile .
+```
+

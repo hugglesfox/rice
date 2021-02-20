@@ -18,7 +18,9 @@ def deglob(paths):
 
 
 def template(paths):
-    """Render a given template files
+    """Render given template files
+
+    Note: This will rewrite the file with the rendered version.
 
     Args:
         paths: An array of file paths to render
