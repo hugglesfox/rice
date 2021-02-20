@@ -37,13 +37,6 @@ variable, so the resulting file should look like
 <h1>Hello World</h1>
 ```
 
-By default rice will modify the file in place but a separate output file can be
-specified with the `-o` flag
-
-```sh
-$ rice hello.html -o output.html
-```
-
 ### Docker
 
 The primary use case for rice is customising configuration files in docker
