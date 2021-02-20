@@ -12,10 +12,10 @@ script:
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin ghcr.io
-  - docker build -t "ghcr.io/hugglesfox/rice:latest" -t "ghcr.io/hugglesfox/rice:$TRAVIS-TAG" .
+  - docker build -t ghcr.io/hugglesfox/rice:latest .
 
 deploy:
   provider: script
-  script: docker push "ghcr.io/hugglesfox/rice:latest" && docker push "ghcr.io/hugglesfox/rice:$TRAVIS-TAG"
+  script: docker push ghcr.io/hugglesfox/rice:latest
   on:
     tags: true
