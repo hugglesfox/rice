@@ -6,11 +6,13 @@ name = "pypi"
 [packages]
 jinja2 = "*"
 docopts = "*"
+python-dotenv = "*"
+pyright = "*"
 
 [dev-packages]
 pytest = "*"
 pytest-cov = "*"
-python-language-server = "*"
+pyright = "*"
 flit = "*"
 
 [requires]

@@ -2,25 +2,23 @@
 requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
-[tool.flit.metadata]
-module = "rice"
-author = "Hayley Hughes"
-author-email = "hayley@foxes.systems"
-home-page = "https://github.com/hugglesfox/rice"
+[project]
+name = "rice"
+authors = [
+	{ name = "Hayley Hughes", email  = "hayley@foxes.systems" },
+]
 classifiers = ["License :: OSI Approved :: Apache Software License"]
-description-file = "README.md"
+readme = "README.md"
 requires-python=">=3.6"
-requires = [
+dynamic = ["version", "description"]
+dependencies = [
 	"jinja2",
 	"docopts",
 ]
 
-[tool.flit.metadata.requires-extra]
-test = [
-	"pytest",
-	"pytest-cov",
-]
+[project.urls]
+Source = "https://github.com/hugglesfox/rice"
 
-[tool.flit.scripts]
-rice = "rice.__main__:main"
+[project.scripts]
+rice = "rice.__main__"
 
