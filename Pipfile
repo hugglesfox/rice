@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jinja2 = "*"
+docopts = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+python-language-server = "*"
+flit = "*"
+
+[requires]
+python_version = "3.9"
