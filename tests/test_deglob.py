@@ -1,5 +1,5 @@
 import unittest
-from rice import deglob
+from rice.utils import deglob
 
 
 class TestDeglobMethod(unittest.TestCase):

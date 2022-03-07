@@ -1,6 +1,6 @@
 import os
 import unittest
-from rice import template
+from rice.utils import template
 
 
 class TestTemplateMethod(unittest.TestCase):
